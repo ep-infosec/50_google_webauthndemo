@@ -1,0 +1,9 @@
+runtime: nodejs16
+service: dev
+env_variables:
+  NODE_ENV: development
+handlers:
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto

@@ -1,0 +1,84 @@
+<span slot="title">WebAuthn Demo</span>
+<span slot="subtitle">Advanced Options</span>
+<div class="advanced-option">
+  <mwc-formfield
+    label="Exclude all credentials"
+    title="Toggles all credential's checkboxes. This checkbox is used to determine whether to include in `excludeCredentials` for registration.">
+    <mwc-checkbox id="exclude-all-credentials" checked></mwc-checkbox>
+  </mwc-formfield>
+  <mwc-formfield
+    label="Send empty `allowCredentials`"
+    title="This checkbox is used to determine whether to remove all credentials in `allowCredentials` for authentication.">
+    <mwc-checkbox id="empty-allow-credentials"></mwc-checkbox>
+  </mwc-formfield>
+</div>
+<div class="advanced-option">
+  <mwc-select
+    id="attachment"
+    label="Attachment Type"
+    outlined>
+    <mwc-list-item selected></mwc-list-item>
+    <mwc-list-item value="platform">Platform</mwc-list-item>
+    <mwc-list-item value="cross-platform">Cross-Platform</mwc-list-item>
+  </mwc-select>
+</div>
+<div class="advanced-option">
+  <mwc-select
+    id="conveyance"
+    label="Conveyance Preference"
+    outlined>
+    <mwc-list-item selected></mwc-list-item>
+    <mwc-list-item value="none">None</mwc-list-item>
+    <mwc-list-item value="indirect">Indirect</mwc-list-item>
+    <mwc-list-item value="direct">Direct</mwc-list-item>
+    <mwc-list-item value="enterprise">Enterprise</mwc-list-item>
+  </mwc-select>
+</div>
+<div class="advanced-option">
+  <mwc-select
+    id="resident-key"
+    label="Discoverable Credential"
+    outlined>
+    <mwc-list-item selected></mwc-list-item>
+    <mwc-list-item value="required">Required</mwc-list-item>
+    <mwc-list-item value="preferred">Preferred</mwc-list-item>
+    <mwc-list-item value="discouraged">Discouraged</mwc-list-item>
+  </mwc-select>
+</div>
+<div class="advanced-option">
+  <mwc-select
+    id="user-verification"
+    label="User Verification"
+    outlined>
+    <mwc-list-item selected></mwc-list-item>
+    <mwc-list-item value="required">Required</mwc-list-item>
+    <mwc-list-item value="preferred">Preferred</mwc-list-item>
+    <mwc-list-item value="discouraged">Discouraged</mwc-list-item>
+  </mwc-select>
+</div>
+<div class="advanced-option">
+  <mwc-textfield
+    id="custom-timeout"
+    label="Timeout (miliseconds)"
+    validationMessage="Input is not a number!"
+    pattern="-?[0-9]*(\.[0-9]+)?"
+    outlined></mwc-textfield>
+</div>
+<div class="advanced-option">
+  <mwc-formfield label="Credential Properties">
+    <mwc-checkbox id="switch-cred-props"></mwc-checkbox>
+  </mwc-formfield>
+</div>
+<div class="advanced-option">
+  <mwc-formfield label="Device Public Key">
+    <mwc-checkbox id="switch-device-pub-key"></mwc-checkbox>
+  </mwc-formfield>
+</div>
+<!-- <div class="advanced-option">
+  <mwc-textfield
+    id="abort-timeout"
+    label="AbortTimeout (miliseconds)"
+    validationMessage="Input is not a number!"
+    pattern="-?[0-9]*(\.[0-9]+)?"
+    outlined></mwc-textfield> -->
+</div>

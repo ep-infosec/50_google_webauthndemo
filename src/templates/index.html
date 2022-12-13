@@ -1,0 +1,55 @@
+<mwc-drawer id="drawer" hasHeader type="modal">
+  {{> sidebar this}}
+  <div slot="appContent" class="app-content">
+    {{> top-app-bar this}}
+    <mwc-linear-progress id="progress"></mwc-linear-progress>
+    <main class="flex-layout">
+      <div class="flex-content">
+        <div id="credentials"></div>
+      </div>
+      {{> footer this}}
+    </main>
+  </div>
+</mwc-drawer>
+<mwc-dialog
+  id="dialog"
+  heading="Sign-in"
+  scrimClickAction=""
+  escapeKeyAction=""
+  hideActions>
+  <div id="firebaseui-auth-container"></div>
+</mwc-dialog>
+<mwc-dialog
+  id="user-info"
+  heading="User Account Info">
+  <div class="center">
+    <mwc-textfield
+      type="text"
+      label="Username"
+      pattern="^.{3,512}"
+      id="username"></mwc-textfield>
+    <mwc-textfield
+      type="text"
+      label="Display Name"
+      pattern="^.{3,512}"
+      id="display-name"></mwc-textfield>
+    <mwc-textfield
+      type="url"
+      label="Picture URL"
+      pattern="^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.?[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$"
+      id="picture-url"></mwc-textfieldtype=>
+  </div>
+  <mwc-button
+    slot="secondaryAction"
+    dialogAction="close">Cancel</mwc-button>
+  <mwc-button
+    id="save-user-info"
+    slot="primaryAction"
+    dialogAction="save"
+    outlined>Save</mwc-button>
+  <mwc-button
+    id="signout"
+    slot="primaryAction"
+    dialogAction="signout"
+    outlined>Sign-out</mwc-button>
+</mwc-dialog>
